@@ -9,10 +9,10 @@ A comprehensive educational project demonstrating **AI and Machine Learning tech
 This project covers **5 critical data management themes** using real-world examples and state-of-the-art AI/ML techniques:
 
 ### 🏛️ Theme 1: Data Governance
-- **PII (Personally Identifiable Information) Detection** using rule-based patterns and ML classifiers
-- Automatic sensitivity classification (High/Medium/Low/None)
-- Pattern matching for phone numbers, IBANs, BSN numbers, emails
-- LogisticRegression classifier to identify risky records
+- **Rule-based column classification** — keyword matching + regex, honest about no ML involved
+- **PII detection in free text** — regex scanner for phone numbers, IBANs, BSN numbers, emails
+- **ML-based PII risk scoring** — LogisticRegression classifier trained on engineered text features
+- **Agentic PII classification (step 1.4)** — GPT-4o writes its own `scan_for_pii()` tool in Python, which is then executed on the real dataset
 
 ### 📏 Theme 2: Data Quality
 - **Anomaly Detection** using Isolation Forest and Elliptic Envelope
@@ -55,7 +55,8 @@ This project covers **5 critical data management themes** using real-world examp
 - TF-IDF vectorization for entity resolution
 
 ✅ **LLM Integration**
-- GPT-4o semantic column tagging
+- GPT-4o semantic column tagging (Metadata Management)
+- **Agentic code generation** — GPT-4o writes executable Python tools (Data Governance)
 - Structured JSON prompt/response format
 - Confidence scoring and privacy risk assessment
 
@@ -140,8 +141,8 @@ Datamanagement/
 ├── requirements.txt                    # Python dependencies
 ├── .github/
 │   └── copilot-instructions.md        # AI instructions for coding
-├── AI_for_Datamanagement.ipynb         # 🇬🇧 English notebook (46 cells)
-└── AI_voor_Datamanagement.ipynb        # 🇳🇱 Dutch notebook (40+ cells)
+├── AI_for_Datamanagement.ipynb         # 🇬🇧 English notebook (49 cells)
+└── AI_voor_Datamanagement.ipynb        # 🇳🇱 Dutch notebook (43 cells)
 ```
 
 ---
@@ -149,7 +150,7 @@ Datamanagement/
 ## 🎯 How to Use
 
 ### For Learning
-1. Start with **Theme 1 (Data Governance)** to understand PII detection
+1. Start with **Theme 1 (Data Governance)** — rule-based PII detection → ML classifier → agentic code generation
 2. Move to **Theme 2 (Data Quality)** for ML-based anomaly detection
 3. Explore **Theme 3 (Data Lineage)** for transformation tracking
 4. Dive into **Theme 4 (Metadata Management)** for the GPT-4o integration
